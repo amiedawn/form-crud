@@ -12,22 +12,40 @@
     <h1>Parent List</h1>
     <form>
       <fieldset id="container-input">
-        Full Name * : <input type="text" id="full-name" name="full-name" required />
-        Email Address: <input type="email" id="email" name="email" placeholder="ex: name@email.com" />
-        City: <input type="text" id="city" />
-        State: <input type="text" id="state" />
+        <label for="parent-first-name">Parent's First Name: <span id="red">*</span></label>
+        <input type="text" id="parent-first-name" class="form-input" name="parent-first-name" required />
+
+        <label for="parent-last-name">Parent's Last Name: <span id="red">*</span></label>
+        <input type="text" id="parent-last-name" class="form-input" name="parent-last-name" required />
+
+        <label for="email">Email Address: </label>
+        <input type="email" id="email" class="form-input" name="email" placeholder="ex: name@email.com" />
+
+        <label for="child-name">Child's First Name: <span id="red">*</span></label>
+        <input type="text" id="child-name" class="form-input" name="child-name" required />
+
+        <label for="grade">Child's Grade: </label>
+        <input type="number" min=1 max=12 id="grade" class="form-input" name="grade" />
+
         <input type="submit" id="btn-add" class="btn" value="Add Record" onclick="submit"></button>
       </fieldset>  
     </form>
     
-    <form>
-      <fieldset id="container-output">
-        <table id="table">
-
-        </table>
-        
-      </fieldset>
-    </form>  
+  
+    <fieldset id="container-output">
+      <table id="table">
+        <thead>
+          <tr>
+            <th class="h-name">Parent's First Name</th>
+            <th class="h-name">Parent's Last Name</th>
+            <th class="h-email">Email</th>
+            <th class="h-name">Child's First Name</th>
+            <th class="h-grade">Child's Grade</th>
+          </tr> 
+        </thead>
+        <tbody></tbody>
+      </table>
+    </fieldset>
   </div>
  
 <script src="index.js"></script>
