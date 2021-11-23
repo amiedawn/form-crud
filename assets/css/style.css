@@ -1,0 +1,34 @@
+* {
+  font-family:Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: #006d77;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  
+}
+
+.container {
+  
+  margin: 25px;
+}
+
+#container-input {
+  padding: 30px;
+  background-color: #83c5be;
+  margin: 25px;
+}
+
+.btn {
+  background-color: #e29578;
+  padding: 15px;
+}
+
+#container-output {
+  background-color: #83c5be;
+  margin: 25px;
+}
