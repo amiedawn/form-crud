@@ -1,60 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel=stylesheet href="assets/css/style.css">
-  <title>CRUD Form</title>
-</head>
-<body>
-  <div class="container">
-    <h1>Parent List</h1>
-    <form id="input-form">
-      <fieldset id="container-input">
-        
-        <label for="parent-first-name">Parent's First Name: <span id="red">*</span></label>
-        <input type="text" id="parent-first-name" class="form-input" name="parent-first-name"  />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>CRUD Form</title>
+  </head>
+  <body>
 
-        <label for="parent-last-name">Parent's Last Name: <span id="red">*</span></label>
-        <input type="text" id="parent-last-name" class="form-input" name="parent-last-name"  />
 
-        <label for="email">Email Address: </label>
-        <input type="email" id="email" class="form-input" name="email" placeholder="ex: name@email.com" />
+    <div class="container">
+      <h1>Parent List</h1>
+      <form id="input-form">
+        <fieldset id="container-input">
+          <label for="parent-first-name"
+            >Parent's First Name: <span id="red">*</span></label
+          >
+          <input
+            type="text"
+            id="parent-first-name"
+            class="form-input"
+            name="parent-first-name"
+            
+          />
 
-        <label for="child-name">Child's First Name: <span id="red">*</span></label>
-        <input type="text" id="child-name" class="form-input" name="child-name"  />
+          <label for="parent-last-name"
+            >Parent's Last Name: <span id="red">*</span></label
+          >
+          <input
+            type="text"
+            id="parent-last-name"
+            class="form-input"
+            name="parent-last-name"
+            
+          />
 
-        <label for="grade">Child's Grade: </label>
-        <input type="number" min=1 max=12 id="grade" class="form-input" name="grade" />
-        
-        <button id="submit" class="submit" onclick="addRecord()">Add Record</button>
-       
-      </fieldset>  
-    </form>
-   
-  
-    <fieldset id="container-output">
-      <table>
-        <thead id="table-header">
+          <label for="email">Email Address: </label>
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            name="email"
+            placeholder="ex: name@email.com"
+          />
+
+          <label for="child-name"
+            >Child's First Name: <span id="red">*</span></label
+          >
+          <input
+            type="text"
+            id="child-name"
+            class="form-input"
+            name="child-name"
+            
+          />
+
+          <label for="grade">Child's Grade: </label>
+          <input
+            type="number"
+            min="1"
+            max="12"
+            id="grade"
+            class="form-input"
+            name="grade"
+          />
+
+          <input id="submit" class="submit" type="button" onclick="addRecord()" value="Add Record" />
+         
+        </fieldset>
+      </form>
+
+      <fieldset id="container-output">
+        <table>
+          <thead id="table-header">
+            <tr>
+              <th class="h-name">Parent's First Name</th>
+              <th class="h-name">Parent's Last Name</th>
+              <th class="h-email">Email</th>
+              <th class="h-name">Child's First Name</th>
+              <th class="h-grade">Child's Grade</th>
+            </tr>
+          </thead>
+          <tbody id="users"></tbody>
           <tr>
-            <th class="h-name">Parent's First Name</th>
-            <th class="h-name">Parent's Last Name</th>
-            <th class="h-email">Email</th>
-            <th class="h-name">Child's First Name</th>
-            <th class="h-grade">Child's Grade</th>
-          </tr>  
-        </thead>
-        <tbody id="users"></tbody>
-        <tr>
-          <td>
-            <div id="myTable"></div>
-          </td>
-        </tr>  
-      </table>
-    </fieldset>
-  </div>
- 
-<script type="type/javascript" src="/index5.js"></script>
-</body>
+            <td>
+              <table id="myTable"></table>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+
+    <script src="index-original.js"></script>
+  </body>
 </html>

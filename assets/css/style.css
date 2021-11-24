@@ -54,9 +54,17 @@ tr .h-name {
 }
 
 tr .h-email {
-  width: 30%;
+  width: 20%;
 }
 
 tr .h-grade {
   width: 10%;
+}
+
+tr .h-edit {
+  width: 5%;
+}
+
+tr .h-delete {
+  width: 5%;
 }

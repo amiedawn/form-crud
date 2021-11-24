@@ -8,9 +8,6 @@ let tableHeader = document.getElementById("#table-header");
 let table = document.getElementById("#myTable");
 let button = document.querySelector("#submit");
 
-
-
-
 // define class Parent with class declaration
 class Parent {
   constructor(parentFirstName, parentLastName, email, childName, grade) {
