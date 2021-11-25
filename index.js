@@ -1,5 +1,8 @@
-function addRecord() {
- 
+const formEl = document.querySelector("#input-form"); // can submit by clicking on button or hitting enter
+
+function addRecord(event) {
+  event.preventDefault();
+
   let parentFirstName = document.getElementById("parent-first-name").value;
   let parentLastName = document.getElementById("parent-last-name").value;
   let email = document.getElementById("email").value;
@@ -8,13 +11,13 @@ function addRecord() {
   let tableHeader = document.getElementById("table-header");
 
   class Parent {
-  constructor(parentFirstName, parentLastName, email, childName, grade) {
-    this.parentFirstName = parentFirstName;
-    this.parentLastName = parentLastName;
-    this.email = email;
-    this.childName = childName;
-    this.grade = grade;
-  }
+    constructor(parentFirstName, parentLastName, email, childName, grade) {
+      this.parentFirstName = parentFirstName;
+      this.parentLastName = parentLastName;
+      this.email = email;
+      this.childName = childName;
+      this.grade = grade;
+    }
     getInfo() {
       return (
         this.parentFirstName,
@@ -24,7 +27,7 @@ function addRecord() {
         this.grade
       );
     }
-  };
+  }
 
   // extra instances of the object
   const parentObj = new Parent(
@@ -35,7 +38,6 @@ function addRecord() {
     grade
   );
   parentObj.getInfo();
-
 
   let table = tableHeader.insertRow(tableHeader.length);
   let cell1 = table.insertCell(0);
@@ -54,5 +56,6 @@ function addRecord() {
   let cell7 = table.insertCell(6);
   cell7.innerHTML =
     "<input type='button' value='Delete' onclick='deleteRow()' />";
-};
+}
 
+formEl.addEventListener("submit", addRecord); // instead of "click" so can hit enter to submit also
