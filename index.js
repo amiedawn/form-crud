@@ -36,6 +36,7 @@ function addRecord() {
   );
   parentObj.getInfo();
 
+
   let table = tableHeader.insertRow(tableHeader.length);
   let cell1 = table.insertCell(0);
   cell1.innerHTML = parentObj.parentFirstName;
@@ -48,11 +49,10 @@ function addRecord() {
   let cell5 = table.insertCell(4);
   cell5.innerHTML = parentObj.grade;
   let cell6 = table.insertCell(5);
-  cell6.innerHTML = "<input type='button' value='Edit' onclick='editRecord(this)' />";
+  cell6.innerHTML =
+    "<input type='button' value='Edit' onclick='editRow(this)' />";
   let cell7 = table.insertCell(6);
-  cell7.innerHTML = "<input type='button' value='Delete' onclick='deleteRecord(this)' />";
+  cell7.innerHTML =
+    "<input type='button' value='Delete' onclick='deleteRow()' />";
 };
 
-function deleteRecord(record) {
-
-};
